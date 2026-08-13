@@ -122,15 +122,22 @@
     <div class="section-content">
       <h2>Example Item Descriptions</h2>
       <p>These are some examples of magical items created in the style of TTRPGs, most notably Dungeons and Dragons. In each case, I aimed to create item descriptions that were interesting and hinted at a wider world, while also keeping to a limited amount of space.</p>
-      <div class="section-grid section-grid--gallery gallery" style="margin-top: 24px;">
-        <img src="assets/img/item_descriptions/potion_glibness.webp" alt="Potion of Glibness" loading="lazy">
-        <img src="assets/img/item_descriptions/thief_pack.webp" alt="Thief's Pack" loading="lazy">
-        <img src="assets/img/item_descriptions/biting_blade.webp" alt="Biting Blade" loading="lazy">
-        <img src="assets/img/item_descriptions/ink_messagine.webp" alt="Ink of Messaging" loading="lazy">
-        <img src="assets/img/item_descriptions/hat_tongues.webp" alt="Hat of Many Tongues" loading="lazy">
-        <img src="assets/img/item_descriptions/whip_health.webp" alt="Alariel's Whip of Health" loading="lazy">
-        <img src="assets/img/item_descriptions/remove_limb.webp" alt="Wand of Remove Limb" loading="lazy">
-        <img src="assets/img/item_descriptions/skull_terbenix.webp" alt="The Skull of Ter'benix" loading="lazy">
+      <div class="item-gallery-container" style="margin-top: 24px;">
+        <div class="item-gallery-main">
+          <button class="gallery-btn prev-btn" aria-label="Previous image">&#10094;</button>
+          <img id="main-gallery-img" src="assets/img/item_descriptions/potion_glibness.webp" alt="Potion of Glibness">
+          <button class="gallery-btn next-btn" aria-label="Next image">&#10095;</button>
+        </div>
+        <div class="item-gallery-thumbnails">
+          <img src="assets/img/item_descriptions/potion_glibness.webp" alt="Potion of Glibness" class="gallery-thumb active">
+          <img src="assets/img/item_descriptions/thief_pack.webp" alt="Thief's Pack" class="gallery-thumb">
+          <img src="assets/img/item_descriptions/biting_blade.webp" alt="Biting Blade" class="gallery-thumb">
+          <img src="assets/img/item_descriptions/ink_messagine.webp" alt="Ink of Messaging" class="gallery-thumb">
+          <img src="assets/img/item_descriptions/hat_tongues.webp" alt="Hat of Many Tongues" class="gallery-thumb">
+          <img src="assets/img/item_descriptions/whip_health.webp" alt="Alariel's Whip of Health" class="gallery-thumb">
+          <img src="assets/img/item_descriptions/remove_limb.webp" alt="Wand of Remove Limb" class="gallery-thumb">
+          <img src="assets/img/item_descriptions/skull_terbenix.webp" alt="The Skull of Ter'benix" class="gallery-thumb">
+        </div>
       </div>
     </div>
   </section>
@@ -305,10 +312,17 @@
   </section>
   </main>
 
-  <footer class="site-footer">
-  <p>&copy; Steve Cook. Fiction, games, and storytelling.</p>
-  </footer>
+<!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
 
+  <footer class="site-footer">
+    <p>&copy; Steve Cook</p>
+  </footer>
   <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
